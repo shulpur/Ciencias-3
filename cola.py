@@ -1,12 +1,12 @@
 class NodoCola:
 	def __init__(self, dato):
 		self.dato = dato
-		self.sig = None 
-		
+		self.sig = None
+
 class Cola:
 	def __init__(self):
 		self.cab = None
-		
+
 	def meter(self, dato):
 		nodo = NodoCola(dato)
 		if self.cab == None:
@@ -16,19 +16,23 @@ class Cola:
 			while aux.sig != None:
 				aux = aux.sig
 			aux.sig = nodo
-			
+
 	def sacar(self):
 		aux = self.cab
 		self.cab = self.cab.sig
 		return aux.dato
-			
+
 	def imprimir(self):
 		aux = self.cab
 		while aux != None:
 			print(aux.dato)
 			aux = aux.sig
-		
-if __name__ == "__main__":		
+
+    def vacia(self):
+        return self.cab == None
+
+
+if __name__ == "__main__":
 	cola = Cola()
 	cola.meter(['Bajaj', 'Jose Hernandez', 'pah-174'])
 	cola.meter(['Yamaha', 'Maria Perez', 'owp-163'])
