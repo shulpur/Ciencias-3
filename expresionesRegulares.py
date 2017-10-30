@@ -25,4 +25,4 @@ for i in lista:
 
 print(listaSalida)
 
-
+#mierda
